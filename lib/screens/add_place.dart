@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 class AddPlaceScreen extends StatefulWidget {
   const AddPlaceScreen({super.key});
-  
+
   @override
   State<AddPlaceScreen> createState() => _AddPlaceScreen();
 }
 
 class _AddPlaceScreen extends State<AddPlaceScreen> {
   final _titleController = TextEditingController();
- 
+
   @override
   void dispose() {
     _titleController.dispose();
@@ -19,7 +19,7 @@ class _AddPlaceScreen extends State<AddPlaceScreen> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: ()=>FocusManager.instance.primaryFocus?.unfocus(),
+      onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Add new Place'),
@@ -31,7 +31,9 @@ class _AddPlaceScreen extends State<AddPlaceScreen> {
               TextField(
                 decoration: const InputDecoration(labelText: 'Title'),
                 controller: _titleController,
-                
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.onBackground,
+                ),
               ),
               const SizedBox(height: 16),
               ElevatedButton.icon(
