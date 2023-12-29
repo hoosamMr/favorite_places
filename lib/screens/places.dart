@@ -8,8 +8,13 @@ class PlacesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Your place'),
-        actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.add))],
+        title: const Text('Your places'),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.add),
+          ),
+        ],
       ),
       body: PlacesList(
         places: [],
