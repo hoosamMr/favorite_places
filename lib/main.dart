@@ -1,3 +1,4 @@
+import 'package:favorite_places/screens/places.dart';
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -17,7 +18,7 @@ final theme = ThemeData().copyWith(
       fontWeight: FontWeight.bold,
     ),
     titleMedium: GoogleFonts.ubuntuCondensed(
-      fontWeight: FontWeight.bold,
+      fontWeight: FontWeight.bold,  
     ),
     titleLarge: GoogleFonts.ubuntuCondensed(
       fontWeight: FontWeight.bold,
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Great Places',
       theme: theme,
-      home: const Text('data'),
+      home: const PlacesScreen(),
     );
   }
 }
