@@ -18,13 +18,13 @@ class Place {
   Place({
     required this.title,
     required this.image,
-    //required this.location,
+    required this.location,
   }) : id = uuid.v4();
 
   final String id;
   final String title;
   final File image;
-  //final PlaceLocation location;
+  final PlaceLocation location;
 }
 // const double xOrigin = 0;
 // const double yOrigin = 0;
